@@ -1,0 +1,22 @@
+﻿  Robot3D.cpp
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\cube.h(59): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\cube.h(64): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(34): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(180): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(266): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(270): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(286): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(298): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(317): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(338): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(340): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(343): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(359): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(361): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\robot3d.cpp(364): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  Assignment1.vcxproj -> C:\Users\jerem\Desktop\CODE\cps511\Assignment1\Debug\Assignment1.exe
+          1 file(s) copied.
