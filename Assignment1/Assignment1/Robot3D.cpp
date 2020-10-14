@@ -12,8 +12,8 @@
 #include "cube.h"
 #include "QuadMesh.h"
 
-const int vWidth  = 1000;    // Viewport width in pixels
-const int vHeight = 750;    // Viewport height in pixels
+const int vWidth = 650;    // Viewport width in pixels
+const int vHeight = 500;    // Viewport height in pixels
 
 // Note how everything depends on robot body dimensions so that can scale entire robot proportionately
 // just by changing robot body scale
@@ -86,7 +86,7 @@ QuadMesh *groundMesh = NULL;
 
 // Structure defining a bounding box, currently unused
 typedef struct BoundingBox {
-    VECTOR3D min;
+	VECTOR3D min;
 	VECTOR3D max;
 } BBox;
 
@@ -149,7 +149,7 @@ void initOpenGL(int w, int h)
 
 	glLightfv(GL_LIGHT0, GL_POSITION, light_position0);
 	glLightfv(GL_LIGHT1, GL_POSITION, light_position1);
-	
+
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 	glEnable(GL_LIGHT1);   // This second light is currently off
@@ -208,7 +208,7 @@ void display(void)
 	glRotatef(cubeAngle, 0.0, 1.0, 0.0);
 	glTranslatef(-8.0, 0, -3.0);
 	// position and draw cube
-	glTranslatef(8.0, 0, 3.0); 
+	glTranslatef(8.0, 0, 3.0);
 	drawCubeMesh(cubeMesh);
 	glPopMatrix();
 
@@ -232,7 +232,7 @@ void drawRobot()
 	drawLeftArm();
 	drawRightArm();
 	glPopMatrix();
-	
+
 	// don't want to spin fixed base
 	drawLowerBody();
 
@@ -263,8 +263,8 @@ void drawHead()
 
 	glPushMatrix();
 	// Position head with respect to parent (body)
-	glTranslatef(0, 0.5*robotBodyLength+0.5*headLength, 0); // this will be done last
-	
+	glTranslatef(0, 0.5*robotBodyLength + 0.5*headLength, 0); // this will be done last
+
 	// Build Head
 	glPushMatrix();
 	glScalef(0.4*robotBodyWidth, 0.4*robotBodyWidth, 0.4*robotBodyWidth);
@@ -313,7 +313,7 @@ void drawLeftArm()
 	glMaterialfv(GL_FRONT, GL_SHININESS, robotArm_mat_shininess);
 
 	glPushMatrix();
-    // Position arm with respect to parent body
+	// Position arm with respect to parent body
 	glTranslatef(0.5*robotBodyWidth + 0.5*upperArmWidth, 0, 0.0); // this will be done last
 
 	// build arm
@@ -341,7 +341,7 @@ void drawRightArm()
 
 	// Position arm and gun with respect to parent body
 	glTranslatef(-(0.5*robotBodyWidth + 0.5*upperArmWidth), 0, 0.0);
-	
+
 	// build arm
 	glPushMatrix();
 	glScalef(upperArmWidth, upperArmLength, upperArmWidth);
@@ -358,8 +358,8 @@ void drawRightArm()
 	// rotate gun
 	glTranslatef(-(0.5*robotBodyWidth + 0.5*upperArmWidth), -(0.5*upperArmLength), 0.0);
 	glRotatef(gunAngle, 1.0, 0.0, 0.0);
-	glTranslatef((0.5*robotBodyWidth + 0.5*upperArmWidth), (0.5*upperArmLength ), 0.0);
-	
+	glTranslatef((0.5*robotBodyWidth + 0.5*upperArmWidth), (0.5*upperArmLength), 0.0);
+
 	// Position gun with respect to parent arm 
 	glTranslatef(0, -(0.5*upperArmLength + 0.5*gunLength), 0.0);
 

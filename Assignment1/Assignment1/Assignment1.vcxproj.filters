@@ -18,7 +18,7 @@
     <ClCompile Include="QuadMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Robot3D.cpp">
+    <ClCompile Include="wedge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
