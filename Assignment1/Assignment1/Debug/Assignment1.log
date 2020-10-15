@@ -16,9 +16,14 @@ c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(227): warni
 c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(228): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
 c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(233): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
 c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(250): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(254): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
 c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(269): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(272): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(288): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(309): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(274): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(273): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(280): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(279): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(285): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(302): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedge.cpp(323): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
   Assignment1.vcxproj -> C:\Users\jerem\Desktop\CODE\cps511\Assignment1\Debug\Assignment1.exe
           1 file(s) copied.

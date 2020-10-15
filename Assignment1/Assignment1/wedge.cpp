@@ -26,7 +26,7 @@ float rightWheel = robotBodyLength * 0.4;
 float robotAngle = 0.0;
 
 // Control wedge rotation
-float wedgeAngle = -25.0;
+float plateAngle = -25.0;
 
 // Lighting/shading and material properties for robot - upcoming lecture - just copy for now
 // Robot RGBA material properties (NOTE: we will learn about this later in the semester)
@@ -247,13 +247,14 @@ void drawWedge()
 
 	glPushMatrix();
 	// Position wedge with respect to parent body
-	glTranslatef(0.75 * robotBodyWidth, 0, 0.0);
+	glTranslatef(0.8 * robotBodyWidth, 0 - robotBodyLength * 0.5, 0.0);
 
 	// Build wedge
 	glPushMatrix();
-	glScalef(wedgeWidth, wedgeLength, wedgeDepth);
+	glScalef(wedgeWidth * 1.2, wedgeLength * 0.05, wedgeDepth * 1.25);
 	glutSolidCube(1.0);
 	glPopMatrix();
+
 	glPopMatrix();
 }
 
@@ -265,12 +266,25 @@ void drawPlate()
 	glMaterialfv(GL_FRONT, GL_SHININESS, robotArm_mat_shininess);
 
 	glPushMatrix();
-	// Position plate with respect to parent body
-	glTranslatef(0.75 * robotBodyWidth, robotBodyLength * 1.2, 0.0);
+	glTranslatef(robotBodyWidth * 0.8, robotBodyLength * 0.45, 0.0);
 
 	glPushMatrix();
-	glScalef(wedgeWidth, wedgeLength * 0.1, wedgeDepth);
+	glTranslatef(
+		0 - (wedgeWidth * 1.25) * 0.5,
+		0 + (wedgeLength * 0.05) * 0.5,
+		0
+	);
+	glRotatef(plateAngle, 0, 0, 1);
+	glTranslatef(
+		0 + (wedgeWidth * 1.25) * 0.5,
+		0 - (wedgeLength * 0.05) * 0.5,
+		0
+	);
+
+	glPushMatrix();
+	glScalef(wedgeWidth * 1.25, wedgeLength * 0.05, wedgeDepth * 1.25);
 	glutSolidCube(1.0);
+	glPopMatrix();
 	glPopMatrix();
 	glPopMatrix();
 }
@@ -335,39 +349,30 @@ void reshape(int w, int h)
 	gluLookAt(0.0, 6.0, 22.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 }
 
-bool stop = false;
+bool stop = true;
 
 // Callback, handles input from the keyboard, non-arrow keys
 void keyboard(unsigned char key, int x, int y)
 {
 	switch (key)
 	{
-	case 't':
-
-		break;
-	case 'r':
+	case 'e':
 		robotAngle += 2.0;
 		break;
-	case 'R':
+	case 'q':
 		robotAngle -= 2.0;
 		break;
-	case 'a':
-		wedgeAngle += 2.0;
-		break;
-	case 'A':
-		wedgeAngle -= 2.0;
-		break;
-	case 'g':
-		
-		break;
-	case 'G':
-		
-		break;
-	case 's':
-		glutTimerFunc(10, animationHandler, 0);
-		break;
-	case 'S':
-		stop = true;
+	case ' ':
+		if (stop)
+		{
+			stop = false;
+			glutTimerFunc(0, animationHandler, 1);
+		}
+		else
+		{
+			glutTimerFunc(1, animationHandler, 0);
+			stop = true;
+		}
 		break;
 	}
 
@@ -375,14 +380,27 @@ void keyboard(unsigned char key, int x, int y)
 }
 
 
-// TODO ****************************************
 void animationHandler(int param)
 {
+	if (plateAngle < -25)
+	{
+		plateAngle = -25;
+	}
+	if (plateAngle > 45)
+	{
+		plateAngle = 45;
+	}
 	if (!stop)
 	{
-		wedgeAngle += 1.0;
+		plateAngle += 1.0;
 		glutPostRedisplay();
-		glutTimerFunc(10, animationHandler, 0);
+		glutTimerFunc(0, animationHandler, 1);
+	}
+	else
+	{
+		plateAngle -= 1.0;
+		glutPostRedisplay();
+		glutTimerFunc(1, animationHandler, 0);
 	}
 }
 
