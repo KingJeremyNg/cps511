@@ -9,8 +9,8 @@
 #include "cube.h"
 #include "QuadMesh.h"
 
-const int vWidth = 650;    // Viewport width in pixels
-const int vHeight = 500;    // Viewport height in pixels
+const int vWidth = 1000;    // Viewport width in pixels
+const int vHeight = 750;    // Viewport height in pixels
 
 // My size variables
 float robotBodyWidth = 10.0;
@@ -26,7 +26,15 @@ float rightWheel = robotBodyLength * 0.4;
 float robotAngle = 0.0;
 
 // Control wedge rotation
-float plateAngle = -25.0;
+float plateAngle = -27.0;
+
+// Control movement
+float moveSpeed = 0;
+
+// Robot position
+float x = 0;
+float y = 0;
+float z = 0;
 
 // Lighting/shading and material properties for robot - upcoming lecture - just copy for now
 // Robot RGBA material properties (NOTE: we will learn about this later in the semester)
@@ -176,11 +184,17 @@ void display(void)
 	glutSwapBuffers();   // Double buffering, swap buffers
 }
 
+const float PI = 3.14159265358979323846;
+
 void drawRobot()
 {
+	x += moveSpeed * sin((robotAngle * PI) / 180);
+	z += moveSpeed * cos((robotAngle * PI) / 180);
+
 	glPushMatrix();
-	// spin robot on base. 
-	glRotatef(robotAngle, 0.0, 1.0, 0.0);
+	//glTranslatef(-x, -y, -z);
+	glRotatef(robotAngle + 90, 0.0, 1.0, 0.0);
+	glTranslatef(x, y, z);
 
 	drawBody();
 	drawWedge();
@@ -196,9 +210,6 @@ void drawBody()
 	glMaterialfv(GL_FRONT, GL_SPECULAR, robotBody_mat_specular);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, robotBody_mat_diffuse);
 	glMaterialfv(GL_FRONT, GL_SHININESS, robotBody_mat_shininess);
-
-	glPushMatrix();
-	glTranslatef(0, 0, 0);
 
 	glPushMatrix();
 	glScalef(robotBodyWidth, robotBodyLength, robotBodyDepth * 0.7);
@@ -233,7 +244,6 @@ void drawBody()
 	glScalef(robotBodyWidth * 0.05, robotBodyLength, robotBodyDepth * 1.25);
 	glTranslatef(robotBodyWidth * -1, 0, 0);
 	glutSolidCube(1.0);
-	glPopMatrix();
 
 	glPopMatrix();
 }
@@ -247,11 +257,11 @@ void drawWedge()
 
 	glPushMatrix();
 	// Position wedge with respect to parent body
-	glTranslatef(0.8 * robotBodyWidth, 0 - robotBodyLength * 0.5, 0.0);
+	glTranslatef(0.775 * robotBodyWidth, 0 - robotBodyLength * 0.5, 0.0);
 
 	// Build wedge
 	glPushMatrix();
-	glScalef(wedgeWidth * 1.2, wedgeLength * 0.05, wedgeDepth * 1.25);
+	glScalef(wedgeWidth * 1.1, wedgeLength * 0.05, wedgeDepth * 1.25);
 	glutSolidCube(1.0);
 	glPopMatrix();
 
@@ -260,14 +270,15 @@ void drawWedge()
 
 void drawPlate()
 {
-	glMaterialfv(GL_FRONT, GL_AMBIENT, robotArm_mat_ambient);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, robotArm_mat_specular);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, robotArm_mat_diffuse);
-	glMaterialfv(GL_FRONT, GL_SHININESS, robotArm_mat_shininess);
+	glMaterialfv(GL_FRONT, GL_AMBIENT, gun_mat_ambient);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, gun_mat_specular);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, gun_mat_diffuse);
+	glMaterialfv(GL_FRONT, GL_SHININESS, gun_mat_shininess);
 
 	glPushMatrix();
 	glTranslatef(robotBodyWidth * 0.8, robotBodyLength * 0.45, 0.0);
 
+	// Rotate plate along this point
 	glPushMatrix();
 	glTranslatef(
 		0 - (wedgeWidth * 1.25) * 0.5,
@@ -291,10 +302,10 @@ void drawPlate()
 
 void drawLeftWheel()
 {
-	glMaterialfv(GL_FRONT, GL_AMBIENT, robotArm_mat_ambient);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, robotArm_mat_specular);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, robotArm_mat_diffuse);
-	glMaterialfv(GL_FRONT, GL_SHININESS, robotArm_mat_shininess);
+	glMaterialfv(GL_FRONT, GL_AMBIENT, gun_mat_ambient);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, gun_mat_specular);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, gun_mat_diffuse);
+	glMaterialfv(GL_FRONT, GL_SHININESS, gun_mat_shininess);
 
 	glPushMatrix();
 
@@ -304,7 +315,7 @@ void drawLeftWheel()
 	// Build Wheels
 	glPushMatrix();
 	glScalef(leftWheel, leftWheel, leftWheel);
-	glutSolidTorus(1, 1, 10, 100);
+	glutSolidTorus(1, 1, 10, 10);
 
 	glPopMatrix();
 	glPopMatrix();
@@ -312,10 +323,10 @@ void drawLeftWheel()
 
 void drawRightWheel()
 {
-	glMaterialfv(GL_FRONT, GL_AMBIENT, robotArm_mat_ambient);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, robotArm_mat_specular);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, robotArm_mat_diffuse);
-	glMaterialfv(GL_FRONT, GL_SHININESS, robotArm_mat_shininess);
+	glMaterialfv(GL_FRONT, GL_AMBIENT, gun_mat_ambient);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, gun_mat_specular);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, gun_mat_diffuse);
+	glMaterialfv(GL_FRONT, GL_SHININESS, gun_mat_shininess);
 
 	glPushMatrix();
 
@@ -325,7 +336,7 @@ void drawRightWheel()
 	// Build Wheels
 	glPushMatrix();
 	glScalef(leftWheel, leftWheel, leftWheel);
-	glutSolidTorus(1, 1, 10, 100);
+	glutSolidTorus(1, 1, 10, 10);
 
 	glPopMatrix();
 	glPopMatrix();
@@ -350,18 +361,13 @@ void reshape(int w, int h)
 }
 
 bool stop = true;
+bool movement = true;
 
 // Callback, handles input from the keyboard, non-arrow keys
 void keyboard(unsigned char key, int x, int y)
 {
 	switch (key)
 	{
-	case 'e':
-		robotAngle += 2.0;
-		break;
-	case 'q':
-		robotAngle -= 2.0;
-		break;
 	case ' ':
 		if (stop)
 		{
@@ -373,6 +379,24 @@ void keyboard(unsigned char key, int x, int y)
 			glutTimerFunc(1, animationHandler, 0);
 			stop = true;
 		}
+		break;
+	case 'w':
+		movement = true;
+		moveSpeed = 1.0;
+		break;
+	case 'a':
+		robotAngle -= 2.0;
+		break;
+	case 's':
+		movement = true;
+		moveSpeed = -1.0;
+		break;
+	case 'd':
+		robotAngle += 2.0;
+		break;
+	default:
+		movement = false;
+		moveSpeed = 0.0;
 		break;
 	}
 

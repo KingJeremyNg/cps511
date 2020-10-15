@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="QuadMesh.cpp" />
-    <ClCompile Include="wedge.cpp" />
+    <ClCompile Include="wedgeBot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cube.h" />
