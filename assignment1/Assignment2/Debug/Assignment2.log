@@ -1,0 +1,24 @@
+﻿  surfaceModeller.cpp
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(42): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(43): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(44): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(180): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(191): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(198): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(206): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(355): warning C4101: 'worldViewableHeight': unreferenced local variable
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(354): warning C4101: 'worldViewableWidth': unreferenced local variable
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(418): warning C4101: 'i': unreferenced local variable
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(538): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(539): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(653): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(654): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(660): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(661): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(729): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(732): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(733): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(802): warning C4244: 'initializing': conversion from 'GLdouble' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment2\surfacemodeller.cpp(803): warning C4244: 'initializing': conversion from 'GLdouble' to 'float', possible loss of data
+  Assignment2.vcxproj -> C:\Users\jerem\Desktop\CODE\cps511\Assignment1\Debug\assignment2.exe
+          1 file(s) copied.

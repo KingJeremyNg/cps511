@@ -1,0 +1,22 @@
+﻿surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowPosition referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowSize referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutInitDisplayMode referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutMainLoop referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutSetWindow referenced in function "void __cdecl mouseButtonHandler(int,int,int,int)" (?mouseButtonHandler@@YAXHHHH@Z)
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutPositionWindow referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutPostRedisplay referenced in function "void __cdecl keyboardHandler(unsigned char,int,int)" (?keyboardHandler@@YAXEHH@Z)
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutSwapBuffers referenced in function "void __cdecl display3D(void)" (?display3D@@YAXXZ)
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutKeyboardFunc referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutSpecialFunc referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutReshapeFunc referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutDisplayFunc referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutMouseFunc referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutMotionFunc referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutPassiveMotionFunc referenced in function main
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutSolidTeapot referenced in function "void __cdecl display3D(void)" (?display3D@@YAXXZ)
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp___glutInitWithExit referenced in function glutInit_ATEXIT_HACK
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp___glutCreateWindowWithExit referenced in function glutCreateWindow_ATEXIT_HACK
+surfaceModeller.obj : error LNK2019: unresolved external symbol __imp_glutMouseWheelFunc referenced in function main
+C:\Users\jerem\Desktop\CODE\cps511\Assignment1\Dependencies\freeglut\lib\Win32\freeglut.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\jerem\Desktop\CODE\cps511\Assignment1\Dependencies\GLEW\lib\Release\Win32\glew32s.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\jerem\Desktop\CODE\cps511\Assignment1\x64\Debug\assignment2.exe : fatal error LNK1120: 19 unresolved externals

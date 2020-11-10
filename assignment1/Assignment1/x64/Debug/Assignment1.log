@@ -1,0 +1,54 @@
+﻿  QuadMesh.cpp
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\quadmesh.cpp(36): warning C4305: '=': truncation from 'double' to 'GLfloat'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\quadmesh.cpp(58): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\quadmesh.cpp(93): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\quadmesh.cpp(99): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  wedgeBot.cpp
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\cube.h(59): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\cube.h(64): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(29): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(49): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(173): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(229): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(235): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(236): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(241): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(242): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(248): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(249): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(254): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(255): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(261): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(276): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(280): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(295): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(301): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(300): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(307): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(306): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(312): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(329): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jerem\desktop\code\cps511\assignment1\assignment1\wedgebot.cpp(351): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  Generating Code...
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowPosition referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowSize referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutInitDisplayMode referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutMainLoop referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutPostRedisplay referenced in function "void __cdecl animationHandler(int)" (?animationHandler@@YAXH@Z)
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutSwapBuffers referenced in function "void __cdecl display(void)" (?display@@YAXXZ)
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutTimerFunc referenced in function "void __cdecl animationHandler(int)" (?animationHandler@@YAXH@Z)
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutKeyboardFunc referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutSpecialFunc referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutReshapeFunc referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutDisplayFunc referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutMouseFunc referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutMotionFunc referenced in function main
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutSolidCube referenced in function "void __cdecl drawBody(void)" (?drawBody@@YAXXZ)
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp_glutSolidTorus referenced in function "void __cdecl drawLeftWheel(void)" (?drawLeftWheel@@YAXXZ)
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp___glutInitWithExit referenced in function glutInit_ATEXIT_HACK
+wedgeBot.obj : error LNK2019: unresolved external symbol __imp___glutCreateWindowWithExit referenced in function glutCreateWindow_ATEXIT_HACK
+C:\Users\jerem\Desktop\CODE\cps511\Assignment1\Dependencies\freeglut\lib\Win32\freeglut.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\jerem\Desktop\CODE\cps511\Assignment1\Dependencies\GLEW\lib\Release\Win32\glew32s.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\jerem\Desktop\CODE\cps511\Assignment1\x64\Debug\assignment1.exe : fatal error LNK1120: 17 unresolved externals
